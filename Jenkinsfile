@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t vgdevops4/cartservice:latest ."
+                        sh "docker build -t vgdevops4/adservice:latest:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push vgdevops4/cartservice:latest "
+                        sh "docker push vgdevops4/adservice:latest:latest "
                     }
                 }
             }
